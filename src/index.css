@@ -1,0 +1,158 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-bubbly: 'Fredoka', cursive, sans-serif;
+    --font-doodle: 'Gaegu', cursive, sans-serif;
+    --font-sans: 'Quicksand', system-ui, -apple-system, sans-serif;
+  }
+}
+
+.font-editorial,
+.font-bubbly {
+  font-family: 'Fredoka', cursive, sans-serif;
+}
+
+.font-handwriting,
+.font-doodle {
+  font-family: 'Gaegu', 'Caveat', cursive;
+}
+
+.font-body,
+.font-sans {
+  font-family: 'Quicksand', system-ui, -apple-system, sans-serif;
+}
+
+/* Custom cute pastel candy scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #FFF5F7;
+}
+::-webkit-scrollbar-thumb {
+  background: #F472B6;
+  border: 2px solid #FFF5F7;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #EC4899;
+}
+
+/* Candle flame animation */
+@keyframes flameFlicker {
+  0%, 100% {
+    transform: scale(1) rotate(-1deg);
+    opacity: 0.95;
+    filter: drop-shadow(0 0 8px rgba(251, 146, 60, 0.8));
+  }
+  25% {
+    transform: scale(1.08, 0.95) rotate(2deg);
+    opacity: 1;
+    filter: drop-shadow(0 0 12px rgba(251, 191, 36, 0.9));
+  }
+  50% {
+    transform: scale(0.95, 1.05) rotate(-2deg);
+    opacity: 0.9;
+    filter: drop-shadow(0 0 10px rgba(239, 68, 68, 0.7));
+  }
+  75% {
+    transform: scale(1.02, 0.98) rotate(1deg);
+    opacity: 0.98;
+    filter: drop-shadow(0 0 14px rgba(251, 146, 60, 0.85));
+  }
+}
+
+.animate-flame {
+  animation: flameFlicker 1.4s ease-in-out infinite alternate;
+  transform-origin: bottom center;
+}
+
+/* Playful Puffy Cat Bouncy Animation */
+@keyframes puffWobble {
+  0%, 100% {
+    transform: scale(1, 1) rotate(0deg);
+  }
+  25% {
+    transform: scale(1.06, 0.94) rotate(-3deg);
+  }
+  50% {
+    transform: scale(0.96, 1.04) rotate(0deg);
+  }
+  75% {
+    transform: scale(1.04, 0.96) rotate(3deg);
+  }
+}
+
+.animate-puff-wobble {
+  animation: puffWobble 2.8s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+@keyframes floatBob {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-float-bob {
+  animation: floatBob 3s ease-in-out infinite;
+}
+
+/* Childish Pop-out sticker effect */
+.pop-card {
+  border-radius: 28px;
+  background: #FFFFFF;
+  border: 3.5px solid #FED7E2;
+  box-shadow: 0 10px 0 0 #FBCFE8, 0 16px 24px rgba(244, 114, 182, 0.15);
+  transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.pop-card:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 14px 0 0 #F472B6, 0 20px 30px rgba(244, 114, 182, 0.25);
+  border-color: #F472B6;
+}
+
+.pop-button {
+  border-radius: 9999px;
+  border: 3px solid #FDA4AF;
+  box-shadow: 0 5px 0 0 #F43F5E;
+  transition: all 0.15s ease-out;
+}
+
+.pop-button:active {
+  transform: translateY(4px);
+  box-shadow: 0 1px 0 0 #F43F5E;
+}
+
+/* Lightweight Hardware-Accelerated Floating Balloons */
+@keyframes floatBalloon {
+  0% {
+    transform: translate3d(0, 105vh, 0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.85;
+  }
+  85% {
+    opacity: 0.85;
+  }
+  100% {
+    transform: translate3d(var(--balloon-sway, 15px), -25vh, 0);
+    opacity: 0;
+  }
+}
+
+.balloon-item {
+  position: absolute;
+  bottom: 0;
+  will-change: transform, opacity;
+  animation-name: floatBalloon;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
