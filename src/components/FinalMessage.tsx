@@ -76,15 +76,7 @@ export const FinalMessage: React.FC<FinalMessageProps> = ({ herName }) => {
           Happy Birthday, sweetest {herName}!
         </motion.p>
 
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-zinc-600 font-body font-medium text-sm sm:text-base mb-6 max-w-sm"
-        >
-          Send me a screenshot or message if this made you smile today! 😊🐾
-        </motion.p>
+
 
 
 
@@ -97,7 +89,7 @@ export const FinalMessage: React.FC<FinalMessageProps> = ({ herName }) => {
           className="mt-12 pt-6 border-t-2 border-dashed border-pink-200 w-full"
         >
           <p className="text-pink-600/80 text-xs sm:text-sm font-bubbly font-bold tracking-wider flex items-center justify-center gap-1.5">
-            <span>Made with endless love for my dearest friend</span>
+            <span>made with loveee for myy kothiii</span>
             <PawIcon className="w-4 h-4 fill-pink-500 text-pink-500" />
           </p>
         </motion.div>

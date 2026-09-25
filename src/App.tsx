@@ -25,7 +25,7 @@ import { CatNavigationMenu } from './components/CatNavigationMenu';
 import { InteractiveCursor } from './components/InteractiveCursor';
 import { FloatingBalloons } from './components/FloatingBalloons';
 
-const STORAGE_KEY = 'bestie_birthday_experience_config_v1';
+const STORAGE_KEY = 'bestie_birthday_experience_config_v6';
 
 export default function App() {
   const [config, setConfig] = useState<BirthdayConfig>(() => {
@@ -36,6 +36,7 @@ export default function App() {
         if (parsed.herName === 'Riya' || !parsed.herName) {
           parsed.herName = 'Javvvuu';
         }
+        parsed.appreciations = initialBirthdayConfig.appreciations;
         return parsed;
       }
     } catch {
@@ -46,7 +47,7 @@ export default function App() {
 
   const [showFireworksIntro, setShowFireworksIntro] = useState(true);
   const [hasOpened, setHasOpened] = useState(false);
-  const [isSurpriseRevealed, setIsSurpriseRevealed] = useState(true);
+  const [isSurpriseRevealed, setIsSurpriseRevealed] = useState(false);
   const [hiddenEditorMode, setHiddenEditorMode] = useState(false);
 
   // Save changes to localStorage
